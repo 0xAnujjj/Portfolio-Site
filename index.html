@@ -1,21 +1,107 @@
-<!doctype html>
-<html lang = "en">
-    <head>
-        <title> My porfolio </title>
-        <link rel="icon" type="image/x-icon" href="images/favicon.ico"  />
-    </head>
-    <body>
-        <header class = "site-header">
-            <nav class = "nav">
-                <a href = "">ABOUT</a>
-                <a href = "">SKILLS</a>
-                <a href = "">LEARNING</a>
-                <a href = "">CONTACT</a>
-            </nav>
-        </header>
-        <main>
-            
-        </main>
-    </body>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anuj Bhatt | Building...</title>
+        <link rel="icon" type="image/x-icon" href="images/slaughter.png"  />
+  <!-- Pixel Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html {
+      font-family: 'Press Start 2P', monospace;
+      background: black;
+    }
+
+    /* Pixel rendering */
+    img {
+      image-rendering: pixelated;
+    }
+
+    /* Retro blink animation (choppy) */
+    @keyframes blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+
+    .blink {
+      animation: blink 1s steps(2, start) infinite;
+    }
+
+    /* Scanline overlay */
+    .scanlines::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(6, 2, 24, 0.05),
+        rgba(0,255,0,0.05) 1px,
+        transparent 1px,
+        transparent 3px
+      );
+      pointer-events: none;
+      z-index: 50;
+    }
+  </style>
+</head>
+
+<body class="text-green-400 min-h-screen flex items-center justify-center scanlines">
+
+  <div class="text-center px-4">
+
+    <!-- Main Block -->
+    <div class="border-4 border-green-400 p-6 sm:p-10 bg-black max-w-xl mx-auto">
+
+     
+
+      <div class="border-4 border-green-400 p-4 mb-6">
+        <p class="text-xs sm:text-sm md:text-base">
+          SITE STATUS:
+        </p>
+
+        <p class="mt-4 text-sm sm:text-base md:text-lg blink">
+          █ BUILDING...
+        </p>
+      </div>
+
+      <p class="text-[10px] sm:text-xs md:text-sm leading-relaxed">
+        This site is under construction.<br>
+        Portfolio soon.
+      </p>
+
+    </div>
+
+    <!-- Footer Info -->
+   <footer class="mt-16 border-t-4 border-green-400 py-8 bg-black">
+  <div class="flex flex-col sm:flex-row items-center justify-center gap-6 text-center">
+
+    <!-- Instagram Block -->
+    <!-- <a 
+      href="https://instagram.com/yourusername" 
+      target="_blank"
+      class="border-4 border-green-400 px-6 py-4 hover:bg-green-400 hover:text-black transition-none"
+    >
+      INSTAGRAM
+    </a> -->
+
+    <!-- GitHub Block -->
+<a 
+  href="https://github.com/yourusername" 
+  target="_blank"
+  class="flex items-center gap-3 border-4 border-green-400 px-6 py-4 hover:bg-green-400 hover:text-black"
+>
+  <img src="images/github.png" alt="GitHub" class="w-6 h-6">
+  GITHUB
+</a>
+  </div>
+</footer>
+
+  </div>
+
+</body>
 </html>
